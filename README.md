@@ -49,7 +49,7 @@ best=(0,4)->(1,5) area=4 sum=10 score=1.000 points=4
 ## 1) 环境安装（统一在 `wx-game`）
 
 ```bash
-cd /Users/yelainab/project/wx_game
+cd /path/to/kaijutuoersuo-auto-solver
 conda create -n wx-game python=3.11 -y
 conda activate wx-game
 pip install -r requirements.txt
@@ -71,7 +71,7 @@ conda init zsh
 
 ## 2) 配置模型（写在代码里）
 
-编辑 [auto_solver.py](/Users/yelainab/project/wx_game/auto_solver.py) 顶部 `LLM API Config (edit here)`：
+编辑 `auto_solver.py` 顶部 `LLM API Config (edit here)`：
 
 - `MIMO_BASE_URL`：MiMo OpenAI 兼容地址
 - `MIMO_API_KEY`：MiMo key
@@ -216,7 +216,7 @@ conda run -n wx-game python test_solver_full_log.py > test_solver_full_log.out 2
 - 使用 `--ocr-every-n > 1` 时若推演与真实棋盘偏差，会在下一次 OCR 自动纠正。
 - 使用 `--ocr-once` 时不会自动纠正漂移，建议搭配较小 `--loops` 或先 `--dry-run` 验证。
 - 当前代码已内置较稳的默认拖拽速度与停留参数（`drag-duration=0.16`、`mouse-settle=0.03`、`down-settle=0.03`、`drag-end-settle=0.05`、`distance-settle-scale=0.00015`）。
-- 如需调整，请直接修改 [auto_solver.py](/Users/yelainab/project/wx_game/auto_solver.py) 中 `argparse` 默认值（`--drag-duration`、`--mouse-settle`、`--down-settle`、`--drag-end-settle`、`--distance-settle-scale`）。
+- 如需调整，请直接修改 `auto_solver.py` 中 `argparse` 默认值（`--drag-duration`、`--mouse-settle`、`--down-settle`、`--drag-end-settle`、`--distance-settle-scale`）。
 - 安全建议：不要把真实 API Key 提交到代码中，建议只在本地私有文件中填写。
 
 计分规则：每次消除时，矩形内每个正数格（`>0`）记 1 分，累计为 `total_points`，会实时打印在日志中。
