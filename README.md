@@ -22,13 +22,15 @@
 
 游戏界面截图：
 
-<img src="./assets/images/kaijutuoersuo_gameplay_screenshot.jpg" alt="开局托儿所-游戏界面" width="760" />
+<p align="center">
+  <img src="./assets/images/kaijutuoersuo_gameplay_screenshot.jpg" alt="开局托儿所-游戏界面" width="620" />
+</p>
 
 UI 截图：
 
 <p>
-  <img src="./assets/images/kaijutuoersuo_ui_screenshot.png" alt="开局托儿所-UI截图" width="375" />
-  <img src="./assets/images/kaijutuoersuo_board_sample.png" alt="开局托儿所-棋盘样例" width="375" />
+  <img src="./assets/images/kaijutuoersuo_ui_screenshot.png" alt="开局托儿所-UI截图" width="300" />
+  <img src="./assets/images/kaijutuoersuo_board_sample.png" alt="开局托儿所-棋盘样例" width="300" />
 </p>
 
 ## 效果展示
